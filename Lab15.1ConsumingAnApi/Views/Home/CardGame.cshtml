@@ -1,0 +1,20 @@
+﻿@model CardSet
+@{
+    ViewData["Title"] = "CardGame";
+}
+
+<h1>CardGame Results</h1>
+
+
+Deck Id: @Model.deck_id
+<br />
+Remaining: @Model.remaining
+<br />
+
+@foreach (Card ca in Model.cards)
+{
+    <div>Suit: @ca.suit</div>
+    <div>Value: @ca.value</div>
+    <img src="@ca.code" />
+    <br />
+}
